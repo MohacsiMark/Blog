@@ -90,11 +90,6 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": false
-      },
-      {
-        "Name": "blogger",
-        "Type": "BlogApi.Models.Blogger",
-        "IsRequired": true
       }
     ],
     "ReturnTypes": []

@@ -168,26 +168,6 @@
             }
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Blogger"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Blogger"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Blogger"
-              }
-            }
-          },
-          "required": true
-        },
         "responses": {
           "200": {
             "description": "OK"
@@ -223,46 +203,6 @@
               "null",
               "string"
             ]
-          }
-        }
-      },
-      "Blogger": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "integer",
-              "string"
-            ],
-            "format": "int32"
-          },
-          "name": {
-            "type": "string"
-          },
-          "email": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "age": {
-            "pattern": "^-?(?:0|[1-9]\\d*)$",
-            "type": [
-              "integer",
-              "string"
-            ],
-            "format": "int32"
-          },
-          "password": {
-            "type": [
-              "null",
-              "string"
-            ]
-          },
-          "registrationTime": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },
