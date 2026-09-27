@@ -80,8 +80,44 @@
   },
   {
     "ContainingType": "BlogApi.Controllers.BlogPostController",
-    "Method": "BloggerGetinformation",
+    "Method": "GetBlogPosts",
     "RelativePath": "api/BlogPost",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[BlogApi.Models.BlogPost, BlogApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlogApi.Controllers.BlogPostController",
+    "Method": "CreateBlogPost",
+    "RelativePath": "api/BlogPost",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "BlogApi.Models.dtos.AddBlogPostDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlogApi.Controllers.BlogPostController",
+    "Method": "GetBlogPost",
+    "RelativePath": "api/BlogPost/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -89,9 +125,114 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
+    "ReturnTypes": [
+      {
+        "Type": "BlogApi.Models.BlogPost",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "BlogApi.Controllers.BlogPostController",
+    "Method": "UpdateBlogPost",
+    "RelativePath": "api/BlogPost/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "BlogApi.Models.dtos.UpdateBlogPostDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlogApi.Controllers.BlogPostController",
+    "Method": "DeleteBlogPost",
+    "RelativePath": "api/BlogPost/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlogApi.Controllers.BlogPostController",
+    "Method": "GetBloggerInformation",
+    "RelativePath": "api/BlogPost/blogger/{bloggerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bloggerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlogApi.Controllers.BlogPostController",
+    "Method": "GetBloggerPostCount",
+    "RelativePath": "api/BlogPost/blogger/{bloggerId}/count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bloggerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlogApi.Controllers.BlogPostController",
+    "Method": "GetBloggerPosts",
+    "RelativePath": "api/BlogPost/blogger/{bloggerId}/posts",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bloggerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "BlogApi.Controllers.BlogPostController",
+    "Method": "GetPostCount",
+    "RelativePath": "api/BlogPost/count",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]
